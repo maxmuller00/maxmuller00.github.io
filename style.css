@@ -88,24 +88,98 @@ nav > .nav-section {
   transition-timing-function: ease-in-out;
 }
 
-#wrapper > .bar:nth-child(1) {
+#data-science {
   background-color: rgb(193,18,31); 
   height: 43%;
   width: 90%;
   top: 5%;
-  left: 5%
+  left: 5%;
+  animation: 1s ease-out -0.2s 1 extendRight;
+  align-items: center;
+  justify-content: center;
+}
+
+#data-science:hover {
+  background-color: rgb(193,18,31); 
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+}
+
+#data-science h1 {
+  color: rgb(193,18,31, 0);
+}
+
+#data-science a {
+  text-decoration: none;
+}
+
+#data-science:hover ~ #fake-so {
+  height: 0%;
+  width: 0%;
+}
+
+#data-science:hover h1 {
+  animation: 1s linear 0s 1 textAppear1;
+  color: var(--text-color);
 }
 
 
-#wrapper > .bar:nth-child(2) {
+#fake-so {
   background-color: rgb(120,155,188);
   width: 90%;
   height: 43%;
   bottom: 5%;
   right: 5%;
+  animation: 1s ease-out 0s 1 extendLeft;
 }
 
-#wrapper[data-roundness="1"] > .bar {
+#fake-so h1 {
+  color: rgb(120,155,188, 0);
+}
+
+#fake-so:hover {
+  background-color: rgb(120,155,188);
+  width: 90%;
+  height: 90%;
+  bottom: 5%;
+  right: 5%;
+}
+
+#fake-so:hover + #data-science {
+  height: 0%;
+  width: 0%;
+}
+
+@keyframes extendRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes extendLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes textAppear1 {
+  0% {
+    color: rgb(193,18,31);
+  }
+  100% {
+    color: rgb(253,240,213);
+  }
+}
+
+/*#wrapper[data-roundness="1"] > .bar {
   border-radius: 0%;
 }
 
@@ -138,7 +212,7 @@ nav > .nav-section {
   width: 35%;
   bottom: 5%;
   right: 1%;
-}
+}*/
 
 
 
