@@ -10,7 +10,6 @@ body {
   margin: 0px;
   overflow: hidden;
   background-color: var(--background-color);
-
   display: grid;
   place-items: center;
 }
@@ -95,8 +94,6 @@ nav > .nav-section {
   top: 5%;
   left: 5%;
   animation: 1s ease-out -0.2s 1 extendRight;
-  align-items: center;
-  justify-content: center;
 }
 
 #data-science:hover {
@@ -109,10 +106,16 @@ nav > .nav-section {
 
 #data-science h1 {
   color: rgb(193,18,31, 0);
+  top: 40%;
+  right: 20%;
+  position: absolute;
+
 }
 
 #data-science a {
   text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
 }
 
 #data-science:hover ~ #fake-so {
@@ -137,6 +140,14 @@ nav > .nav-section {
 
 #fake-so h1 {
   color: rgb(120,155,188, 0);
+  top: 40%;
+  right: 23%;
+  position: absolute;
+}
+
+#fake-so a {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
 }
 
 #fake-so:hover {
@@ -150,6 +161,11 @@ nav > .nav-section {
 #fake-so:hover + #data-science {
   height: 0%;
   width: 0%;
+}
+
+#fake-so:hover h1 {
+  animation: 1s linear 0s 1 textAppear2;
+  color: var(--text-color);
 }
 
 @keyframes extendRight {
@@ -173,6 +189,15 @@ nav > .nav-section {
 @keyframes textAppear1 {
   0% {
     color: rgb(193,18,31);
+  }
+  100% {
+    color: rgb(253,240,213);
+  }
+}
+
+@keyframes textAppear2 {
+  0% {
+    color: rgb(120,155,188);
   }
   100% {
     color: rgb(253,240,213);
