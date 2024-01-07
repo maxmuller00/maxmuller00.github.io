@@ -1,4 +1,6 @@
 const wrapper = document.getElementById('wrapper');
+const data_science = document.getElementById('data-science');
+const fake_so = document.getElementById('fake-so');
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 

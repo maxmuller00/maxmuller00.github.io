@@ -1,12 +1,77 @@
+:root {
+  --background-color: rgb(0,48,73);
+  --text-color: rgb(253,240,213);
+  --border-color: rgb(255,255,255, 0.1);
+}
+
 body {
   height: 100vh;
   width: 100vw;
   margin: 0px;
   overflow: hidden;
-  background-color: rgb(10,10,10);
+  background-color: var(--background-color);
 
   display: grid;
   place-items: center;
+}
+
+nav {
+  background-color: var(--background-color);
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+nav > .nav-section {
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 1rem;
+  border-left: 1px solid var(--border-color);
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-logo-section,
+#nav-link-section {
+  flex-basis: calc(100% /3);
+}
+
+#nav-logo-section {
+  justify-content: flex-start;
+}
+
+#nav-logo-section > i {
+  font-size: 2.5rem;
+}
+
+#nav-link-section {
+  justify-content: flex-start;
+}
+
+#nav-social-section,
+#nav-contact-section {
+  flex-grow: 1;
+}
+
+#nav-social-section {
+  gap: 3rem;
+}
+
+#nav-social-section > a > i {
+  font-size: 1.5rem;
 }
 
 #wrapper {
@@ -17,9 +82,6 @@ body {
 }
 
 #wrapper > .bar {
-  height: 30%;
-  width: 30%;
-  background-color: aliceblue;
   position: absolute;
   transition: left, right, height, width, border-radius;
   transition-duration: 750ms;
@@ -27,11 +89,20 @@ body {
 }
 
 #wrapper > .bar:nth-child(1) {
-  background-color: rgb(193,18,31);  
+  background-color: rgb(193,18,31); 
+  height: 43%;
+  width: 90%;
+  top: 5%;
+  left: 5%
 }
 
+
 #wrapper > .bar:nth-child(2) {
-  background-color: rgb(120,155,188); 
+  background-color: rgb(120,155,188);
+  width: 90%;
+  height: 43%;
+  bottom: 5%;
+  right: 5%;
 }
 
 #wrapper[data-roundness="1"] > .bar {
