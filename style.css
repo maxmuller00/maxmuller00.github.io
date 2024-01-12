@@ -52,7 +52,7 @@ nav > .nav-section {
   justify-content: flex-start;
 }
 
-#nav-logo-section > i {
+#nav-logo-section > a > i {
   font-size: 2.5rem;
 }
 
@@ -77,7 +77,7 @@ nav > .nav-section {
   aspect-ratio: 1.618;
   width: 90vmin;
   position: relative;
-  background-color: aliceblue;
+  background-color: var(--text-color);
 }
 
 #wrapper > .bar {
@@ -202,6 +202,23 @@ nav > .nav-section {
   100% {
     color: rgb(253,240,213);
   }
+}
+
+#aboutWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly
+}
+
+img {
+  height: 50%;
+  width: 25%;
+  border-radius: 10px;
+}
+
+pre {
+  font-family: "Rubik", sans-serif;
+  color: var(--text-color);
 }
 
 /*#wrapper[data-roundness="1"] > .bar {
